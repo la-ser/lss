@@ -3,6 +3,7 @@
   "name": "LSS Style",
   "version": "1.0",
   "description": "Automatically injects custom CSS into polizei.leitstellenspiel.de.",
+  "permissions": ["storage"],
   "content_scripts": [
     {
       "matches": ["https://polizei.leitstellenspiel.de/*"],
@@ -14,5 +15,9 @@
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CSS Injector Options"
   }
 }
