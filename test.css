@@ -27,7 +27,7 @@ color: white !important;
 #missions-sortable-select { background: black; color: white; }
 #missions_outer { border-bottom-right-radius: 10px; }
 .label-success { zoom: 1.1; }
-.progress { background-color: rgb(31,31,31); color: white; }
+.progress, .mission_progress, .progress mission_progress { background-color: rgb(31,31,31) !important; color: white !important; }
 .search-station-input { background-color: black; color: white; }
 
 ::-webkit-scrollbar {
@@ -100,4 +100,9 @@ body.dark #missions .panel-success .panel-heading {
 
 .panel {
   outline: 1px solid rgb(31,31,31) !important;
+}
+
+.bigMapWindow {
+  border-bottom-left-radius: 10px;
+  padding: 3px !important;
 }

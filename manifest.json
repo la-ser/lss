@@ -1,17 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Style Changer",
-  "version": "1.1",
-  "permissions": ["storage", "scripting"],
-  "host_permissions": ["<all_urls>"],
-  "action": {
-    "default_popup": "popup.html"
-  },
+  "name": "LSS Style",
+  "version": "1.0",
+  "description": "Automatically injects custom CSS into polizei.leitstellenspiel.de.",
   "content_scripts": [
     {
-      "matches": ["https://leitstellenspiel.de/*", "https://polizei.leitstellenspiel.de/*"],
-      "js": ["content.js"],
-      "run_at": "document_end"
+      "matches": ["https://polizei.leitstellenspiel.de/*"],
+      "js": ["content.js"]
     }
   ],
   "icons": {
