@@ -42,3 +42,12 @@ document.getElementById("expandBtn").addEventListener("click", function () {
     height: 600,
   });
 });
+
+fetch("https://github.com/la-ser/lss/blob/main/manifest.json")
+  .then((res) => res.json())
+  .then((remoteManifest) => {
+    chrome.runtime.getManifest().version; // current version
+    if (remoteManifest.version !== chrome.runtime.getManifest().version) {
+      alert("Update available! Please download the new version from GitHub.");
+    }
+  });
