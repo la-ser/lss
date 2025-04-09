@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Style Changer",
+  "version": "1.0",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://leitstellenspiel.de/*", "https://polizei.leitstellenspiel.de/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
